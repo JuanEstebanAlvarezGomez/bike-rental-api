@@ -26,7 +26,6 @@ public class BikeService {
         return bikeRepository.findByStatusAndType(BikeStatus.Disponible, type);
     }
 
-    // Nuevos métodos
     public List<Bike> getAllBikes() {
         return bikeRepository.findAll();
     }
