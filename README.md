@@ -15,25 +15,29 @@ Swagger UI | https://bike-rental-api-cqba.onrender.com/swagger-ui/index.html
 - [Arquitectura](#arquitectura)
 - [Requisitos Previos](#requisitos-previos)
 - [Ejecución Local](#ejecución-local)
-- [Endpoints de la API](#endpoints-de-la-api)
-- [Ejemplos de Peticiones](#ejemplos-de-peticiones)
-- [Colección Postman](#colección-postman)
+- [Ejemplos de Peticiones con Postman](#ejemplos-de-peticiones-con-postman)
 - [Ejecución de Tests](#ejecución-de-tests)
-- [Reglas de Negocio](#reglas-de-negocio)
-- [Estructura del Proyecto](#estructura-del-proyecto)
-- [Supuestos Tomados](#supuestos-tomados)
 
 ## Tecnologías
 
 -Java v21 - Lenguaje principal 
+
 -Spring Boot v3.5.15 - Framework base 
+
 -Spring Security v6.x - Autenticación Basic Auth 
+
 -Spring Data JPA - Persistencia de datos
+
 -H2 Database - Base de datos en memoria
+
 -SpringDoc OpenAPI v2.8.8 - Documentación Swagger
+
 -Maven v3.8+ - Gestor de dependencias
+
 -Lombok v1.18.34 - Reducción de código boilerplate
+
 -JUnit 5 + Mockito - Pruebas unitarias
+
 -Render - Plataforma de despliegue
 
 ## Arquitectura
@@ -112,7 +116,9 @@ http://localhost:8080/h2-console
 
   Password: (vacío)
 
-## Ejemplos de peticiones con Postman (o puedes usar swagger)
+## Ejemplos de peticiones con Postman
+
+(Tambien puedes usar swagger para verificar las peticiones)
 
 https://bike-rental-api-cqba.onrender.com/swagger-ui/index.html
 
@@ -221,10 +227,15 @@ password	-> admin1
 Los datos de referencia para las pruebas cargados en la base de datos son:
 
 Código  Tipo   Estado inicial
+
 BIC-001 URBANA Disponible
+
 BIC-002 MONTAÑA Disponible
+
 BIC-003 ELÉCTRICA Disponible
+
 BIC-004 MONTAÑA En_mantenimiento
+
 BIC-005 URBANA Disponible
 
 ## Ejecución de Tests
@@ -236,6 +247,9 @@ mvn test
 Los tests incluyen:
 
 PricingServiceTest	-> Cálculo de costos, redondeo y multas
+
 RentalServiceTest	-> Inicio/finalización de alquileres, validaciones
+
 BikeServiceTest	-> CRUD de bicicletas, validaciones de estado
+
 Total	21
