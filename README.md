@@ -4,7 +4,9 @@ API REST para la gestión de alquiler de bicicletas. Permite registrar bicicleta
 
 ## API Desplegada
 
-La API está disponible en la nube con Render
+La API está disponible en la nube con Render.
+
+NOTA: La primera vez que se ingresa al dominio puede tardar hasta un minuto de retraso en cargar debido a que el servicio web se inactiva si no hay visitas recientes.
 
 API Base | https://bike-rental-api-cqba.onrender.com
 Swagger UI | https://bike-rental-api-cqba.onrender.com/swagger-ui/index.html 
@@ -58,11 +60,11 @@ Swagger UI | https://bike-rental-api-cqba.onrender.com/swagger-ui/index.html
 
 ### Justificación
 
-- Arquitectura por capas: Separa responsabilidades, facilitando mantenimiento y pruebas
-- Inyección de dependencias: Usando `@RequiredArgsConstructor` de Lombok
-- Servicio de precios separado (`PricingService`): Principio de responsabilidad única (SOLID)
-- DTOs y Mappers: para aislamiento entre capa de API y dominio
-- Manejo global de excepciones: usando `@RestControllerAdvice` para respuestas consistentes
+- Arquitectura por capas: Separa responsabilidades, facilitando mantenimiento y pruebas.
+- Inyección de dependencias: Usando `@RequiredArgsConstructor` de Lombok.
+- Servicio de precios separado (`PricingService`): Principio de responsabilidad única (SOLID).
+- DTOs y Mappers: para aislamiento entre capa de API y dominio.
+- Manejo global de excepciones: usando `@RestControllerAdvice` para respuestas consistentes.
 
 ## Requisitos Previos
 
@@ -99,7 +101,9 @@ La aplicación estará disponible en: http://localhost:8080
 ### 4. Credenciales de acceso
 
 La API utiliza Basic Authentication:
+
 User: admin
+
 Password: admin1
 
 ### 5. Acceder a Swagger UI
@@ -246,10 +250,10 @@ mvn test
 
 Los tests incluyen:
 
-PricingServiceTest	-> Cálculo de costos, redondeo y multas
+PricingServiceTest	-> Cálculo de costos, redondeo y multas.
 
-RentalServiceTest	-> Inicio/finalización de alquileres, validaciones
+RentalServiceTest	-> Inicio/finalización de alquileres, validaciones.
 
-BikeServiceTest	-> CRUD de bicicletas, validaciones de estado
+BikeServiceTest	-> CRUD de bicicletas, validaciones de estado.
 
 Total	21
